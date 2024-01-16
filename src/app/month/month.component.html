@@ -1,0 +1,26 @@
+<div class="month-data">
+  
+  <div class="month-name">
+    <span>{{month.monthNumber | numberToMonth }} {{month.monthYear}}</span>
+  </div>
+
+  <div class="month-tables">
+    <app-table *ngFor="let table of month.tables" [table]="table" [monthYear]="month.monthYear" [monthNumber]="month.monthNumber" (sumUpdated)="sumUpdated(table.tableName,$event)"></app-table>   
+  </div>
+  
+</div>
+
+<div class="month-calculations">
+  <div class="card" *ngFor="let item of month.calculations" [ngClass]="item.name">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item text-light bg-secondary" [ngClass]="{'bg-secondary' : item.name === 'current-savings',
+      'bg-primary': item.name === 'current-expenditure',
+      'bg-danger' : item.name === 'current-earnings',
+      'bg-success' : item.name === 'previous-savings'
+    
+    }">{{item.name.split("-").join(" ") | titlecase}}</li>
+    
+      <li class="list-group-item list-group-value">{{item.value}}</li> <!-- Ensure this line is displaying the value -->
+    </ul>
+  </div>
+ </div>

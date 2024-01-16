@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand navbar-dark bg-dark px-2">
+
+    <div class="container-fluid">
+
+        <div class="side-nav-button text-light p-1" (click)="toggleSideNaV()">
+
+            <i class="bi bi-grid-3x3-gap-fill"></i>
+
+        </div>   
+           
+            <a href="" class="navbar-brand px-4">Home Expense Manager</a>
+
+            <div class="chart-button text-light p-1">
+                <button type="button" class="btn btn-lg btn-dark chart-button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <i class="bi bi-pie-chart-fill"></i> 
+                  </button>   
+            </div>
+
+            <!-- Button trigger modal -->
+   
+  
+  <!-- Modal -->
+  <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <app-chart></app-chart>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+            <div class="navbar-collapse form-container">
+
+                <!-- <div class="spacer"></div> 
+
+                <div class="form-wrapper">
+                    <form action="" class="d-flex">
+                        <input type="search" class="form-control me-2" placeholder="search">
+                        <button class="btn btn-outline-light" type="submit">Search</button>
+                    </form>
+                 </div> -->
+
+            </div>
+        
+    </div>
+</nav>
