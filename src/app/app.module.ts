@@ -12,7 +12,7 @@ import { MonthComponent } from './month/month.component';
 import { TableComponent } from './table/table.component';
 import { NumberToMonthPipe } from './pipes/number-to-month.pipe';
 import { MonthToNumberPipe } from './pipes/month-to-number.pipe';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ChartComponent } from './chart/chart.component';
 
 @NgModule({
@@ -32,7 +32,8 @@ import { ChartComponent } from './chart/chart.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
     
   ],
   providers: [],
